@@ -1,12 +1,12 @@
 const config = {
-  title: 'sake portfolio',
-  author: 'sake',
+  title: 'ROHE portfolio',
+  author: 'ROHE',
   description:
-    'システムエンジニアsakeのポートフォリオサイトです',
-  url: 'https://sakeengineer.com/',
+    'サムネ芸人ROHEのポートフォリオサイトです',
+  url: 'https://roheio.com/',
   social: {
-    twitter: 'sake_engineer',
-    github: 'sakelog',
+    twitter: 'roheclassic',
+    github: 'roheclassic',
   },
 };
 

@@ -43,12 +43,12 @@ const NavMenu = () => (
     />
     <NavItem
       id="works"
-      title="作成したもの"
+      title="GitHubリポジトリ"
       icon={<MdOutlineWorkOutline size="24" />}
     />
     <NavItem
       id="contact"
-      title="お問い合わせ"
+      title="お問い合わせは受け付けておりません。"
       icon={<FiMail size="24" />}
     />
   </nav>
