@@ -8,6 +8,7 @@ import {
   carreer,
   skill,
   qualification,
+  language,
 } from 'lib/graphCMS/getContent';
 import github from 'lib/github/getContent';
 import qiita from 'lib/qiita/getContent';
@@ -26,6 +27,7 @@ type PageProps = {
     aboutMeItems?: Profile.AboutMe.Items;
     carreerItems?: Profile.Carreer.Items;
     qualifications?: Profile.Qualification.Items;
+    languageItems?: Profile.Language.Items;
   };
   skillLists?: Skill.Collections;
   worksItem: {
@@ -42,7 +44,7 @@ const TopPage: NextPage<PageProps> = (props) => {
     worksItem,
     ogpImagePath,
   } = props;
-  const { aboutMeItems, carreerItems, qualifications } =
+  const { aboutMeItems, carreerItems, qualifications, languageItems } =
     profileItem;
   const { githubRepos, qiitaArticles } = worksItem;
   return (
@@ -52,6 +54,7 @@ const TopPage: NextPage<PageProps> = (props) => {
         aboutMeItems={aboutMeItems}
         carreerItems={carreerItems}
         qualifications={qualifications}
+        languageItems={languageItems}
       />
       <Skill skillLists={skillLists} />
       <Works
@@ -73,7 +76,7 @@ export const getStaticProps: GetStaticProps<
   const skillLists = await skill.getSkillLists();
   const qualifications =
     await qualification.getQualifications();
-
+  const languageItems = await language.getLanguageItems();
   const githubRepos = await github.repo.getRepositories();
   const qiitaArticles = await qiita.article.getArticles();
 
@@ -89,6 +92,7 @@ export const getStaticProps: GetStaticProps<
         aboutMeItems,
         carreerItems,
         qualifications,
+        languageItems,
       },
       skillLists,
       worksItem: {

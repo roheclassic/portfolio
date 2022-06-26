@@ -36,4 +36,12 @@ declare namespace Profile {
     };
     declare type Items = Qualification[];
   }
+  declare namespace Language {
+    declare type Item = {
+      id: string;
+      name: string;
+      detail: string;
+    };
+    declare type Items = Item[];
+  }
 }

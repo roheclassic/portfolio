@@ -1,13 +1,15 @@
 import AboutMe from 'components/Profile/AboutMe';
 import Carreer from 'components/Profile/Carreer';
 import Qualification from 'components/Profile/Qualification';
+import Language from 'components/Profile/Language';
 
 const Profile = (props: {
   aboutMeItems: Profile.AboutMe.Items;
   carreerItems: Profile.Carreer.Items;
   qualifications: Profile.Qualification.Items;
+  languageItems: Profile.Language.Items;
 }) => {
-  const { aboutMeItems, carreerItems, qualifications } =
+  const { aboutMeItems, carreerItems, qualifications,languageItems } =
     props;
   return (
     <div>
@@ -21,6 +23,7 @@ const Profile = (props: {
         <AboutMe aboutMeItems={aboutMeItems} />
         <Carreer carreerItems={carreerItems} />
         <Qualification qualifications={qualifications} />
+        <Language languageItems={languageItems} />
       </section>
     </div>
   );
